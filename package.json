@@ -5,7 +5,7 @@
   "type": "module",
   "main": "src/server.ts",
   "scripts": {
-    "start": "ts-node src/server.ts",
+    "start": "node src/server.ts",
     "start:prod": "NODE_ENV=production nodemon src/server.ts",
     "dev": "nodemon --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
