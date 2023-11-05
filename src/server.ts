@@ -5,12 +5,6 @@ import app from "./app";
 
 dotenv.config();
 
-process.on("uncaughtException", (err) => {
-  console.log("UNCAUGHT EXCEPTION! 💥 Shutting down...");
-  console.log(err.name, err.message);
-  process.exit(1);
-});
-
 const server = http.createServer(app);
 
 const DATABASE = process.env.DATABASE || "";
@@ -29,12 +23,4 @@ const port = process.env.PORT || 4000;
 
 server.listen(port, () => {
   console.log(`App running on port ${port}...`);
-});
-
-process.on("unhandledRejection", (err: Error) => {
-  console.log("UNHANDLED REJECTION! 💥 Shutting down...");
-  console.log(err.name, err.message);
-  server.close(() => {
-    process.exit(1);
-  });
 });
