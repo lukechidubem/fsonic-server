@@ -1,6 +1,7 @@
 import mongoose from "mongoose";
 import http from "http";
 import dotenv from "dotenv";
+import app from "./app";
 
 dotenv.config();
 
@@ -9,8 +10,6 @@ process.on("uncaughtException", (err) => {
   console.log(err.name, err.message);
   process.exit(1);
 });
-
-import app from "./app";
 
 const server = http.createServer(app);
 
