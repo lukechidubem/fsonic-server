@@ -4,6 +4,8 @@
   "description": "",
   "main": "src/server.ts",
   "scripts": {
+    "start": "node server.js",
+    "start:prod": "NODE_ENV=production nodemon server.js",
     "dev": "nodemon --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
