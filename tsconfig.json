@@ -1,7 +1,10 @@
 {
   "compilerOptions": {
-    "target": "ES2018",
+    // "target": "ES2018",
+    "target": "ES6",
+    "allowJs": true,
     "module": "commonjs",
+    "moduleResolution": "node",
     "outDir": "./dist",
     "rootDir": "./src",
     "strict": true,
